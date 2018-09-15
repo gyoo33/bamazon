@@ -70,7 +70,8 @@ var runSearch = function (res) {
         console.log(res);
         for (var i = 0; i < res.length; i++) {
           if (quantity > res[i].stock_quantity) {
-            console.log("Insufficient Quantity!");
+            console.log("Insufficient Quantity! Please try again.");
+            displayData();
           }
           else {
             var updatedQuantity = res[i].stock_quantity - quantity;
